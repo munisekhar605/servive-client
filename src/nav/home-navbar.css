@@ -1,6 +1,7 @@
 .nav-background-color{
     background-color: rgb(255, 255, 255);
-   
+    font-family: roboto;
+    
 }
 .nav-text-color{
     color:rgb(51, 51, 51) !important;
@@ -8,6 +9,6 @@
 .nav-name-title{
     font-weight: 900;
     color:rgb(51, 51, 51) !important;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: roboto;
     font-size: xx-large;
 }

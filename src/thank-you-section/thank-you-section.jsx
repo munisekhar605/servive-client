@@ -20,12 +20,12 @@ function ThankYouSection(){
               </div>
             
             </div>
-            <div class="col-12 col-md-5 d-none d-md-block">
+            {/* <div class="col-12 col-md-5 d-none d-md-block">
               <img
                 src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png"
                 class="thanking-customers-section-img"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
