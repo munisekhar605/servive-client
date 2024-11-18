@@ -5,12 +5,11 @@
 }
 .item-container{
     background-color: rgb(255, 255, 255);
-    height: 320px;
+    height: 300px;
     width: 300px;
-    padding: 10px;
-    border: 2px solid rgb(231, 206, 188);
+    padding: 5px;
     border-radius: 10px;
-  
+    margin: 10px;
     
 }
 .nav-img-container{
