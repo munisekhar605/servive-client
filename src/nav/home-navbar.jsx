@@ -15,7 +15,7 @@ function HomeNavbar() {
 
   // Handle navigation for Men, Women, Kids, and Cart
   const handleNavigation = (path) => {
-    navigate(path); // Updates the route without reloading the page
+    navigate(path); // Updates  the route without reloading the page
   };
 
   const loginForm = () => {
