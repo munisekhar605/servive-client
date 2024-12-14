@@ -1,0 +1,52 @@
+
+.login-from-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1px); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-from-container-item{
+    background-color: white;
+    padding:2%;
+    border-radius: 10px;  
+}
+.login-from-input-item {
+    outline: none;
+    width: 400px;
+    margin: 10px;
+    border-radius: 10px;
+    border:1px solid #453704;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.login-from-button-item{
+    background-color: #866528;
+    color:white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    font-size: large;
+    border: solid transparent;
+    font-family: 'Courier New', Courier, monospace;
+}
+.login-from-label {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+
+@media screen and (max-width:450px){
+    .login-from-input-item {
+        width: 200px;
+        margin: 10px;
+    }
+}

@@ -1,112 +1,51 @@
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import './items.css'
+import './items.css';
+import {useNavigate} from 'react-router-dom'
 function Items() {
+  let data = [
+    {
+      id: 1,
+      productImg: "https://res.cloudinary.com/muni/image/upload/v1731901101/S-K-CASUAL-Cotton-Blend-SDL251800163-1-8c992_hslnds.jpg",
+      title: "Shirt",
+      ratimg: 3,
+      price: 555,
+    },
+    {
+      id: 2,
+      productImg: "https://res.cloudinary.com/muni/image/upload/v1731909217/e_igdwoy.jpg",
+      title: "Shirt",
+      ratimg: 3,
+      price: 555,
+    }
+  ];
+
+
+  const navigate = useNavigate();
+
+  const handleClick = (id) => {
+    console.log("hhh")
+    navigate(`/product/${id}`); 
+  };
+
   return (
-    <div className='items-container'>
-       <Row>
-            <Col xs={5} sm={5} md={4} lg={4} xl={2} xxl={2} className='shadow-sm shadow item-container shadow'>
-            <img className='nav-img-container ' src='https://res.cloudinary.com/muni/image/upload/v1731901101/S-K-CASUAL-Cotton-Blend-SDL251800163-1-8c992_hslnds.jpg'></img>
-            <p className='item-title'>Shirt</p>
-            <button className='item-button'>Buy Now</button>
-            <button className='item-rating'>3.5{" || 65 "}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-            </svg>
+    <div className="items-container"  >
+      <Row>
+        {data.map((dataitem) => (
+          <Col xs={5} sm={5} md={4} lg={4} xl={2} xxl={2} key={dataitem.id} onClick={()=>handleClick(dataitem.id)} className='shadow-sm item-container'>
+            <img className='nav-img-container' src={dataitem.productImg} alt={dataitem.title}></img>
+            <p className='item-title'>{dataitem.title}</p>
+            <button className='item-button' onClick={()=>handleClick(dataitem.id)}>Buy Now</button>
+            <button className='item-rating' onClick={()=>handleClick(dataitem.id)}>
+              {dataitem.ratimg}{" || 65 "}
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+              </svg>
             </button>
-            <p className='item-price'>580₹</p>
-            </Col>
-            <Col xs={5} sm={5} md={4} lg={4} xl={2} xxl={2} className='shadow item-container'>
-            <img className='nav-img-container' src='https://res.cloudinary.com/muni/image/upload/v1731909217/e_igdwoy.jpg'></img>
-            <p className='item-title'>Rigo Rayon </p>
-            <button className='item-button'>Buy Now</button>
-            <button className='item-rating'>3.5{" || 65 "}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-            </svg>
-            </button>
-            <p className='item-price'>580₹</p>
-            </Col>
-            <Col xs={5} sm={5} md={4} lg={4} xl={2} xxl={2} className='shadow item-container'>
-            <img className='nav-img-container' src='https://res.cloudinary.com/muni/image/upload/v1731912594/Ketch-100-Cotton-Slim-Fit-SDL423882619-1-40702_rnzwer.avif'></img>
-            <p className='item-title'>Rigo Rayon </p>
-            <button className='item-button'>Buy Now</button>
-            <button className='item-rating'>3.5{" || 65 "}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-            </svg>
-            </button>
-            <p className='item-price'>580₹</p>
-            </Col>
-            <Col xs={5} sm={5} md={4} lg={4} xl={2} xxl={2} className='shadow item-container'>
-            <img className='nav-img-container' src='https://res.cloudinary.com/muni/image/upload/v1731912594/Rigo-Black-Rayon-Slim-Fit-SDL257322251-1-1a341_eihee6.avif'></img>
-            <p className='item-title'>Rigo Rayon </p>
-            <button className='item-button'>Buy Now</button>
-            <button className='item-rating'>3.5{" || 65 "}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-            </svg>
-            </button>
-            <p className='item-price'>580₹</p>
-            </Col>
-            <Col xs={5} sm={5} md={4} lg={4} xl={2} xxl={2} className='shadow item-container'>
-            <img className='nav-img-container' src='https://res.cloudinary.com/muni/image/upload/v1731912594/Showoff-Linen-Regular-Fit-Solids-SDL771035827-1-21291_zylm38.avif'></img>
-            <p className='item-title'>Rigo Rayon </p>
-            <button className='item-button'>Buy Now</button>
-            <button className='item-rating'>3.5{" || 65 "}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-            </svg>
-            </button>
-            <p className='item-price'>580₹</p>
-            </Col>
-            <Col xs={5} sm={5} md={4} lg={4} xl={2} xxl={2} className='shadow item-container'>
-            <img className='nav-img-container' src='https://res.cloudinary.com/muni/image/upload/v1731912594/Ketch-100-Cotton-Slim-Fit-SDL423882619-1-40702_rnzwer.avif'></img>
-            <p className='item-title'>Rigo Rayon </p>
-            <button className='item-button'>Buy Now</button>
-            <button className='item-rating'>3.5{" || 65 "}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-            </svg>
-            </button>
-            <p className='item-price'>580₹</p>
-            </Col>
-            <Col xs={5} sm={5} md={4} lg={4} xl={2} xxl={2} className='shadow item-container'>
-            <img className='nav-img-container' src='https://res.cloudinary.com/muni/image/upload/v1731912946/d.jpg'></img>
-            <p className='item-title'>Rigo Rayon </p>
-            <button className='item-button'>Buy Now</button>
-            <button className='item-rating'>3.5{" || 65 "}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-            </svg>
-            </button>
-            <p className='item-price'>580₹</p>
-            </Col>
-            <Col xs={5} sm={5} md={4} lg={4} xl={2} xxl={2} className='shadow item-container'>
-            <img className='nav-img-container' src='https://res.cloudinary.com/muni/image/upload/v1731912594/Vida-Loca-Coffee-Linen-Slim-SDL926334008-1-54626_rghxxz.avif'></img>
-            <p className='item-title'>Rigo Rayon </p>
-            <button className='item-button'>Buy Now</button>
-            <button className='item-rating'>3.5{" || 65 "}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-            </svg>
-            </button>
-            <p className='item-price'>580₹</p>
-            </Col>
-            <Col xs={5} sm={5} md={4} lg={4} xl={2} xxl={2} className='shadow item-container'>
-            <img className='nav-img-container' src='https://res.cloudinary.com/muni/image/upload/v1731912945/Rangita-Organza-Woven-Saree-With-SDL480246106-1-d9930_vus7fe.avif'></img>
-            <p className='item-title'>Rigo Rayon </p>
-            <button className='item-button'>Buy Now</button>
-            <button className='item-rating'>3.5{" || 65 "}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-            </svg>
-            </button>
-            <p className='item-price'>580₹</p>
-            </Col>
-         
-            
-        </Row>
+            <p className='item-price'>{dataitem.price}₹</p>
+          </Col>
+        ))}
+      </Row>
     </div>
   );
 }

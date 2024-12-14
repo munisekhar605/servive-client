@@ -1,0 +1,49 @@
+.orders-container{
+    height: 500px;
+    background-color: rgb(241, 238, 238);
+    overflow-y: auto;
+    scrollbar-width: none;
+    
+}
+.orders-heading{
+    text-align: center;
+    font-family: roboto;
+    margin: 5px;
+    margin-bottom: 25px;
+}
+.order-item-container{
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    margin: 15px;
+    margin-left: 10%;
+}
+.order-item-container{
+    display: flex;
+    justify-content: space-around;
+}
+.order-item-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    padding: 10px;
+}
+.order-item-details {
+    font-family: roboto;
+    margin-top: 1%;
+}
+.order-item-title{
+    
+}
+.order-item-description{
+    font-size: small;
+    color: gray;
+}
+.order-item-price{
+    text-align: center;
+    font-family: roboto;
+    font-size: x-large;
+    font-weight: 500;
+    margin-top: 1%;
+    color:rgb(147, 87, 45);
+}

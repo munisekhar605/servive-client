@@ -12,3 +12,10 @@
     font-family: roboto;
     font-size: xx-large;
 }
+.nav-login-button{
+    margin-right: 10px;
+    
+}
+.nav-item{
+    margin-left: 20px;
+}
